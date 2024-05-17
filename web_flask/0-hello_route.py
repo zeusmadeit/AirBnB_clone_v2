@@ -10,9 +10,8 @@ You must use the option strict_slashes=False in your route definition
 from flask import Flask
 
 app = Flask(__name__)
-app.url_map.strict_slashes = False
 
-@app.route("/")
+@app.route("/", strict_slashes=False)
 def hello():
     return "Hello HBNB!"
 
